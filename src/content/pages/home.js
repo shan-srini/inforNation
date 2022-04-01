@@ -1,28 +1,26 @@
-import { articleIndex } from '../articles/index';
-
 const homeContent = [
     {
         title: 'Trending',
         articles: [
-            articleIndex['test-id']
+            10, 11, 12, 13, 14
         ]
     },
     {
         title: 'Recommended',
         articles: [
-            articleIndex['test-id']
+            'test-id'
         ]
     },
     {
         title: 'Local',
         articles: [
-            articleIndex['test-id']
+            'test-id'
         ]
     },
     {
         title: 'Sports',
         articles: [
-            articleIndex['test-id']
+            'test-id'
         ]
     }
 ];

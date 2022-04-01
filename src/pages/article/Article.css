@@ -1,0 +1,11 @@
+.article-container {
+  padding-top: 16px;
+  color: white;
+}
+
+.article-content {
+  padding-left: 30%;
+  padding-right: 30%;
+  line-height: 180%;
+  font-size: large;
+}

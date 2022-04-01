@@ -1,3 +1,5 @@
+import { CircularProgress, Typography, Container } from '@mui/material';
+import './Article.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {getArticleById} from '../../content/articles';
@@ -18,11 +20,14 @@ const Article = (props) => {
 
     return (
         article ?
-            <div>
-                {article.title}
-            </div>
+        <Container className='article-container'>
+            <Typography variant='h3' textAlign='center'>{article.title}</Typography>
+            <Container className='article-content'>
+                {article.content}
+            </Container>
+        </Container>
         :
-            <div>article not found</div>
+        <CircularProgress />
     )
 }
 
