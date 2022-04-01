@@ -8,19 +8,19 @@ const homeContent = [
     {
         title: 'Recommended',
         articles: [
-            'test-id'
+            15, 16, 17, 18, 19
         ]
     },
     {
         title: 'Local',
         articles: [
-            'test-id'
+            1, 2, 3
         ]
     },
     {
         title: 'Sports',
         articles: [
-            'test-id'
+            6, 7, 8
         ]
     }
 ];

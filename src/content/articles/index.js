@@ -1,11 +1,25 @@
 // ARTICLE IMPORTS
 // local articles
+import article1 from './local/1';
+import article2 from './local/2';
+import article3 from './local/3';
+// sports articles
+import article6 from './sports/6';
+import article7 from './sports/7';
+import article8 from './sports/8';
+// trending articles
 import testArticle from './local/test-id';
 import article10 from './trending/10';
 import article11 from './trending/11';
 import article12 from './trending/12';
 import article13 from './trending/13';
 import article14 from './trending/14';
+// recommended articles
+import article15 from './recommended/15';
+import article16 from './recommended/16';
+import article17 from './recommended/17';
+import article18 from './recommended/18';
+import article19 from './recommended/19';
 
 /** 
  * An indexing of id to relative path of where to access article
@@ -13,11 +27,22 @@ import article14 from './trending/14';
  */
 export const articleIndex = {
     [testArticle.id]: testArticle,
+    [article1.id]: article1,
+    [article2.id]: article2,
+    [article3.id]: article3,
+    [article6.id]: article6,
+    [article7.id]: article7,
+    [article8.id]: article8,
     [article10.id]: article10,
     [article11.id]: article11,
     [article12.id]: article12,
     [article13.id]: article13,
-    [article14.id]: article14
+    [article14.id]: article14,
+    [article15.id]: article15,
+    [article16.id]: article16,
+    [article17.id]: article17,
+    [article18.id]: article18,
+    [article19.id]: article19,
 };
 
 /**

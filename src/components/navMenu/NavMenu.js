@@ -8,7 +8,7 @@ const NavMenu = ({ closeMenu }) => {
       <div className='menu-inner-container'>
         <div className='menu'>
           <div className='menu-top-bar'>
-            <MenuIcon className='inner-menu-icon-button' />
+            <MenuIcon onClick={closeMenu} className='inner-menu-icon-button' />
             <Typography variant='h3'>Menu</Typography>
           </div>
         </div>
@@ -18,3 +18,4 @@ const NavMenu = ({ closeMenu }) => {
   }
 
   export default NavMenu;
+  
