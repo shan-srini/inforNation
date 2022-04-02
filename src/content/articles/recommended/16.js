@@ -5,6 +5,7 @@ const article = {
   title: "Odd Performance Art to Celebrate Sesame Stream Novel",
   image:
     "https://64.media.tumblr.com/33c95952d1f0d8a76003f990dc3f0a7b/tumblr_pd6b6eSHAc1vvcp1fo1_1280.jpg",
+    date: '3/29/22',
   content: (
     <div>
       <p>

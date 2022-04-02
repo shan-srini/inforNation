@@ -5,6 +5,7 @@ const article = {
   title: "Ventrilotarian Meet-Up's First Day Off to A Great Start",
   image:
     "https://gratisography.com/wp-content/uploads/2022/03/gratisography-10-free-stock-photo-1170x780.jpg",
+    date: '3/20/22',
   content: (
     <div>
       <p>

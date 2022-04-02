@@ -11,6 +11,7 @@ const NavMenu = ({ closeMenu }) => {
             <MenuIcon onClick={closeMenu} className='inner-menu-icon-button' />
             <Typography variant='h3'>Menu</Typography>
           </div>
+          <Typography variant='h5'>Menu Content Coming Soon...</Typography>
         </div>
         <div onClick={closeMenu} className='menu-close-space' />
       </div>

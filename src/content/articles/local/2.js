@@ -5,6 +5,7 @@ const article = {
   title: "Boston Marathon Changing to an All Fours Event",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/116/50.jpeg",
+    date: '3/30/22',
   content: (
     <div>
       <p>

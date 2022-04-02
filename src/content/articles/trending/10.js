@@ -4,6 +4,7 @@ const article = {
   id: 10,
   title: "Young Girl Solves Traveling Salesman Problem",
   image: "https://iso.500px.com/wp-content/uploads/2015/03/business_cover.jpeg",
+  date: '4/1/22',
   content: (
     <div>
       <p>

@@ -5,6 +5,7 @@ const article = {
   title: "Pastry Woman Has Escaped",
   image:
     "https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-02-scaled.jpg",
+    date: '4/1/22',
   content: (
     <div>
       <p>

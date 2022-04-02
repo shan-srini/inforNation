@@ -5,6 +5,7 @@ const article = {
   title: "Burn Victim Has New Face Regrown",
   image:
     "https://thumbs.dreamstime.com/b/senior-man-holding-knee-pain-collage-concept-abstract-pain-despair-senior-man-holding-knee-pain-collage-145429588.jpg",
+    date: '3/22/22',
   content: (
     <div>
       <p>

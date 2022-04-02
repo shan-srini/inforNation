@@ -5,6 +5,7 @@ const article = {
   title: "Is Billiards Safe for Children? New Concussion Study Suggests it Definitely is Not",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/118/4.jpeg",
+    date: '3/31/22',
   content: (
     <div>
       <p>

@@ -5,6 +5,7 @@ const article = {
   title: "New Pressure Point Discovered?",
   image:
     "https://www.business2community.com/wp-content/uploads/2015/10/42454567_m.jpg.jpg",
+    date: '3/30/22',
   content: (
     <div>
       <p>

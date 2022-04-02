@@ -4,6 +4,7 @@ const article = {
   id: 14,
   title: "Working Outside Boosts Productivity by 43%",
   image: "https://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg",
+  date: '3/30/22',
   content: (
     <div>
       <p>

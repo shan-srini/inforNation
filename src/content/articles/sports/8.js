@@ -5,6 +5,7 @@ const article = {
   title: "Who Really is On First?",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/118/10.jpeg",
+    date: '3/10/22',
   content: (
     <div>
       <p>

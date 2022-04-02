@@ -5,6 +5,7 @@ const article = {
   title: "Boston Man Eats 39 Wedding Cakes",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/116/45.jpeg",
+    date: '3/31/22',
   content: (
     <div>
       <p>

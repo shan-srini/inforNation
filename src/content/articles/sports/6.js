@@ -5,6 +5,7 @@ const article = {
   title: "Newest Olympic Sport: Fish Juggling",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/117/98.jpeg",
+    date: '4/1/22',
   content: (
     <div>
       <p>

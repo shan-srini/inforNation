@@ -5,6 +5,7 @@ const article = {
   title: "What To Do When Your Child Discovers Fanfiction",
   image:
     "https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg",
+    date: '3/10/22',
   content: (
     <div>
       <p>

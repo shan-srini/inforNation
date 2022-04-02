@@ -15,10 +15,11 @@
 
 .menu {
   height: 100%;
-  width: 25%;
+  width: fit-content;
   color: white;
   background-color: darkslategray;
   padding: 16px;
+  padding-right: 36px;
 }
 
 .menu-top-bar {
@@ -29,4 +30,5 @@
 
 .inner-menu-icon-button {
   padding-right: 24px;
+  cursor: pointer;
 }

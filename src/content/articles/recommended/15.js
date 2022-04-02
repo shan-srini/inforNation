@@ -5,6 +5,7 @@ const article = {
   title: "Winnie The Pooh Convention Ends in Tragedy",
   image:
     "https://i.guim.co.uk/img/media/d1a9d4e48fda2fb3175d248ddf47bffb8fa93230/0_0_3840_5760/master/3840.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=5810bd5676555575ef6f62312cfa78fa",
+    date: '3/31/22',
   content: (
     <div>
       <p>

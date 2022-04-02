@@ -4,6 +4,7 @@ const article = {
   id: 18,
   title: "Meowfather Cat Cosplay Goes Viral",
   image: "https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg",
+  date: '3/19/22',
   content: (
     <div>
       <p>

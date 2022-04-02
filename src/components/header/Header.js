@@ -34,7 +34,7 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
             <div onClick={goHome} className='home-logo'>
-              <Typography variant="h4">
+              <Typography variant="h4" fontSize={'5vw'}>
                 inforNation
               </Typography>
             </div>

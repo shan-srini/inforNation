@@ -5,6 +5,7 @@ const article = {
   title: "Stetson East Voted Best Restaurant in Boston",
   image:
     "https://www.worldgreynews.com/uploads/main2/0/2/117/94.jpeg",
+    date: '3/29/22',
   content: (
     <div>
       <p>
