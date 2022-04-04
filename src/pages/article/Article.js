@@ -1,31 +1,14 @@
-import { CircularProgress, Typography, Container } from '@mui/material';
+import { Box, CircularProgress, Typography, Container } from '@mui/material';
 import './Article.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getArticleById } from '../../content/articles';
+import { SavePost, SharePost, VizToggle } from '../../components'
 
 const Article = (props) => {
     const { id: articleId } = useParams();
     const [article, setArticle] = useState();
     const [isVizOpen, setIsVizOpen] = useState(false)
-
-    const VizToggle = ({ isVizOpen }) => {
-        return isVizOpen ?
-            (
-                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-minus" width={24} height={24} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1={5} y1={12} x2={19} y2={12}></line>
-                </svg>
-            )
-            :
-            (
-                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-plus" width={24} height={24} viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1={12} y1={5} x2={12} y2={19}></line>
-                    <line x1={5} y1={12} x2={19} y2={12}></line>
-                </svg>
-            )
-    }
 
     useEffect(() => {
         getArticleById(articleId)
@@ -40,8 +23,20 @@ const Article = (props) => {
     return (
         article ?
             <Container className='article-container'>
-                <Typography className='article-title' variant='h3' textAlign='left'>{article.title}</Typography>
-
+                <Box className='article-heading'>
+                    <Typography className='article-title' variant='h3' textAlign='left' style={{ maxWidth: '75%', }}>
+                        {article.title}
+                    </Typography>
+                    <button className='button' style={{ borderRadius: '0.375rem', marginLeft: '8px', marginRight: '32px' }}>
+                        <VizToggle isVizOpen={isVizOpen} height='24' width='24' stroke='white'/>
+                    </button>
+                    <button className='button' style={{ borderRadius: '0.5rem',}}>
+                        <SavePost height='32' width='32' stroke='white'/>
+                    </button>
+                    <button className='button' style={{ borderRadius: '0.5rem',}}>
+                        <SharePost height='32' width='32' stroke='white'/>
+                    </button>
+                </Box>
                 <Container className='article-content'>
                     {article.content}
                 </Container>
