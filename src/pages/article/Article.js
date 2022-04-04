@@ -9,6 +9,10 @@ const Article = (props) => {
     const { id: articleId } = useParams();
     const [article, setArticle] = useState();
     const [isVizOpen, setIsVizOpen] = useState(false)
+    
+    useEffect(() => {
+        setIsVizOpen(false)
+    }, [])
 
     useEffect(() => {
         getArticleById(articleId)
