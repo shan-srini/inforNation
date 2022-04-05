@@ -2,7 +2,7 @@ import './Article.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, CircularProgress, Typography, Container } from '@mui/material';
-import ReactFlow, { MiniMap, Controls } from 'react-flow-renderer';
+import ReactFlow from 'react-flow-renderer';
 import 'react-flow-renderer/dist/style.css';
 import { getArticleById } from '../../content/articles';
 import { SavePost, SharePost, VizToggle } from '../../components'
