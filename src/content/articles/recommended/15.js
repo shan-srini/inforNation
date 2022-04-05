@@ -1,5 +1,8 @@
 import React from "react";
 
+import { SourceValidatedCheckbox } from '../../../components'
+import { defaultTextStyles, defaultVizNodeStyles } from '../constants'
+
 const article = {
   id: 15,
   title: "Winnie The Pooh Convention Ends in Tragedy",
@@ -27,6 +30,41 @@ const article = {
       </p>
     </div>
   ),
+  vizData: {
+    nodes: [
+      {
+        draggable: false,
+        id: 'currentArticle',
+        targetPosition: 'left',
+        type: 'output',
+        data: {
+          label: (
+            <>
+              <SourceValidatedCheckbox height={48} width={48} stroke={'white'} />
+            </>
+          ),
+        },
+        position: { x: 0, y: 0 },
+        style: defaultVizNodeStyles
+      },
+      {
+        draggable: false,
+        id: 'bostonGlobe_report',
+        sourcePosition: 'right',
+        type: 'input',
+        data: {
+          label: (
+            <p style={defaultTextStyles}>Primary-reported by <strong>The Global Times</strong> (Chinese state-owned national publication)</p>
+          ),
+        },
+        position: { x: -200, y: 0 },
+        style: defaultVizNodeStyles
+      },
+    ],
+    edges: [
+      { id: 'bostonGlobe_report - currentArticle', source: 'bostonGlobe_report', target: 'currentArticle', type: 'smoothstep', animated: true, },
+    ]
+  }
 };
 
 export default article;

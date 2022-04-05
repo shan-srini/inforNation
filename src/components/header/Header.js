@@ -17,20 +17,20 @@ const Header = () => {
 
   return (
     <>
-    <Slide direction='right' mountOnEnter unmountOnExit in={menuVisible}>
-      <div className='menu-container'><NavMenu closeMenu={() => setMenuVisible(false)} /></div>
-    </Slide>
+      <Slide direction='right' mountOnEnter unmountOnExit in={menuVisible}>
+        <div className='menu-container'><NavMenu closeMenu={() => setMenuVisible(false)} /></div>
+      </Slide>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-          <IconButton
+            <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
               onClick={() => setMenuVisible(true)}
-              >
+            >
               <MenuIcon />
             </IconButton>
             <div onClick={goHome} className='home-logo'>
@@ -39,8 +39,8 @@ const Header = () => {
               </Typography>
             </div>
             <Container>
-                <SearchBar />
-          </Container>
+              <SearchBar />
+            </Container>
           </Toolbar>
         </AppBar>
       </Box>
