@@ -27,7 +27,10 @@ const ArticlePreview = ({ articleId }) => {
                     <img src={article.image} width={200} height={200} className='article-preview-img' alt='inforNation article preview' />
                     <Typography color='white' variant="subtitle1" className='article-preview-title'>{article.title}</Typography>
                     <div className='article-preview-bottom'>
-                        <CircularProgressWithLabel value={Math.random() * 100} />
+                        <span style={{ fontSize: '12px', color: 'white' }}>
+                          <CircularProgressWithLabel value={article.validityScore} />
+                          <div>Articile Validity</div>
+                        </span>
                         <span className='article-preview-date'>{article.date}</span>
                     </div>
                 </>
@@ -69,8 +72,8 @@ function CircularProgressWithLabel(props) {
         <Typography
           variant="caption"
           component="div"
-          color={calculateColor()}
-        >{`${Math.round(props.value)}`}</Typography>
+          color={'white'}
+        >{props.value}</Typography>
       </Box>
     </Box>
   );

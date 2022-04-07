@@ -27,6 +27,7 @@ const article = {
       </p>
     </div>
   ),
+  validityScore: 22
 };
 
 export default article;
