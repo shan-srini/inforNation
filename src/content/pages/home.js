@@ -14,13 +14,13 @@ const homeContent = [
     {
         title: 'Local',
         articles: [
-            1, 2, 3
+            1, 2, 3, 4, 5
         ]
     },
     {
         title: 'Sports',
         articles: [
-            6, 7, 8
+            6, 7, 8, 9, 20
         ]
     }
 ];
