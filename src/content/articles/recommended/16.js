@@ -44,6 +44,7 @@ const article = {
       </p>
     </div>
   ),
+  validityScore: 63,
   vizData: {
     nodes: [
       {
