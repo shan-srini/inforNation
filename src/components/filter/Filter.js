@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Filter.css';
-import { Popover, Slider, Stack, Divider, Input } from '@mui/material';
+import { Popover, Slider, Stack, Divider } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { DateRangePicker } from "materialui-daterange-picker";
 import DateRangeIcon from '@mui/icons-material/DateRange';
