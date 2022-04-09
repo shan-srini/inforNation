@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Filter.css";
 import { Popover, Slider, Stack, Divider, TextField } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
