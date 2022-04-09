@@ -19,11 +19,16 @@ const Search = () => {
                 if (minimumValidity) {
                     res = res.filter(x => x.validityScore && x.validityScore >= minimumValidity);
                 }
-                if (startDate) {
+                if (!!startDate) {
                     res = res.filter(x => x.date && new Date(x.date) >= new Date(startDate));
+                    console.log(startDate);
+                    console.log(res);
                 }
                 if (endDate) {
+                    console.log(typeof endDate)
                     res = res.filter(x => x.date && new Date(x.date) >= new Date(endDate));
+                    console.log(endDate)
+                    console.log(res)
                 }
                 setArticles(res);
             });

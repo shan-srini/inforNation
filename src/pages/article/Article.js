@@ -24,7 +24,7 @@ const Article = (props) => {
                 setArticle(content);
             })
             .catch((err) => {
-                console.log(err);
+                console.error(err);
             })
     }, [articleId]);
 
