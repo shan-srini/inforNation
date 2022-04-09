@@ -5,7 +5,8 @@ import { Box, CircularProgress, Typography, Container } from '@mui/material';
 import ReactFlow from 'react-flow-renderer';
 import 'react-flow-renderer/dist/style.css';
 import { getArticleById } from '../../content/articles';
-import { SavePost, SharePost, VizToggle } from '../../components'
+import { SavePost, SharePost, VizToggle } from '../../components';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Article = (props) => {
     const { id: articleId } = useParams();
@@ -42,6 +43,9 @@ const Article = (props) => {
                     </button>
                     <button className='button' title='Share post' style={{ borderRadius: '0.5rem', }}>
                         <SharePost height='32' width='32' stroke='white' />
+                    </button>
+                    <button onClick={() => window.history.back()} className='button' title='Close page' style={{ borderRadius: '0.5rem', marginLeft: '32px' }}>
+                        <CloseIcon color='error' height='32' width='32' />
                     </button>
                 </Box>
 

@@ -3,10 +3,14 @@
 import article1 from './local/1';
 import article2 from './local/2';
 import article3 from './local/3';
+import article4 from './local/4';
+import article5 from './local/5';
 // sports articles
 import article6 from './sports/6';
 import article7 from './sports/7';
 import article8 from './sports/8';
+import article9 from './sports/9';
+import article20 from './sports/20';
 // trending articles
 import testArticle from './local/test-id';
 import article10 from './trending/10';
@@ -30,9 +34,13 @@ export const articleIndex = {
     [article1.id]: article1,
     [article2.id]: article2,
     [article3.id]: article3,
+    [article4.id]: article4,
+    [article5.id]: article5,
     [article6.id]: article6,
     [article7.id]: article7,
     [article8.id]: article8,
+    [article9.id]: article9,
+    [article20.id]: article20,
     [article10.id]: article10,
     [article11.id]: article11,
     [article12.id]: article12,

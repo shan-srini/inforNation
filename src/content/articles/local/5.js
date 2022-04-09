@@ -4,19 +4,19 @@ import { SourceValidatedCheckbox } from '../../../components'
 import { defaultTextStyles, defaultVizNodeStyles } from '../constants'
 
 const article = {
-  id: 3,
-  title: "Stetson East Voted Best Restaurant in Boston",
+  id: 5,
+  title: "Is Boston Boring?",
   image:
-    "https://www.worldgreynews.com/uploads/main2/0/2/117/94.jpeg",
-    date: '3/29/22',
+    "https://www.worldgreynews.com/uploads/main2/0/2/142/8.jpeg",
+    date: '2/20/22',
   content: (
     <div>
       <p>
-      Boston boasts some of the most famous and notable restaurants in the world, from the historic Italian cuisine of the North End, tantalizing seafood in the newly developed Seaport neighborhood. However, when it came to locals in the Greater Boston Area, the vote was shocking. In the largest landslide since the re-election of Ronald Reagan, Stetson East Dining Hall, located in the lower level of one of Northeastern University's freshman dormitories, was voted best restaurant by a margin of 97%. This famed eatery offers a unique and rotating menu of flavors that are sure to leave students and patrons satisfied. The decor reminds you of a cafeteria as you load up on number 4 of your unlimited plates. This establishment is sure to remain, and we recommend you to try it.
+      Boston is one of the most popular and exciting places in the United States currently, which draws in everyone from college students, to residents, to tourists all year round. This city is home to the Red Sox, a fantastic aquarium, some of the country's best seafood, and historic ethnic areas like the North End and Chinatown. But is this wonderful city actually really lame? Northeastern student, Gabriel Lantz claims that this city is old and ruins all the fun. "No happy hours, no parties, and everything is closed by 9 except for Dominos. Also, no one accepts my fake ID so I can't go anywhere at night" quotes Lantz. His opinions are not isolated, however, as more students are claiming they are unable to obtain a serotonin overload from Boston amenities. There is a petition running to allow Happy Hour back in Boston, and to eliminate the long-overdue law limiting the number of residence permitted in one residence. Boston is a city with so much potential, but why is it just like so sad sometimes. Be better.
       </p>
     </div>
   ),
-  validityScore: 94,
+  validityScore: 10,
   vizData: {
     nodes: [
       {

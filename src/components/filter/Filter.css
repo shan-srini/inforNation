@@ -1,0 +1,19 @@
+.divider {
+    padding-top: 10px;
+}
+
+.slider-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slider {
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.slider-text-box {
+    width: 27px;
+    color: black !important;
+}
