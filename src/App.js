@@ -9,18 +9,18 @@ import Article from './pages/article/Article';
 import Search from './pages/search/Search';
 
 const App = () => {
-    return (
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/articles/:id" element={<Article />} />
-            <Route path="/search" element={<Search />} />
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    )
-}
+	return (
+		<ThemeProvider theme={theme}>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/articles/:id' element={<Article />} />
+					<Route path='/search' element={<Search />} />
+				</Routes>
+			</BrowserRouter>
+		</ThemeProvider>
+	);
+};
 
 export default App;
