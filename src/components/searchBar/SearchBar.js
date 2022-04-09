@@ -18,15 +18,16 @@ const SearchBar = () => {
 
     const onEnter = (event, value) => {
       if (!value) return;
-      console.log(value);
         const minValidityQuery = minimumValidity ? `&v=${minimumValidity}` : '';
-        const dateRangeQuery = dateRange ? `&sd=${dateRange.startDate}&ed=${dateRange.endDate}` : '';
-        navigate(`/search?q=${value}${minValidityQuery}${dateRangeQuery}`);
+        const startDateQuery = dateRange && dateRange.startDate ? `&sd=${dateRange.startDate}` : '';
+        const endDateQuery = dateRange && dateRange.endDate ? `&ed=${dateRange.endDate}` : '';
+        navigate(`/search?q=${value}${minValidityQuery}${startDateQuery}${endDateQuery}`);
     }
 
     return (
         <Autocomplete
             freeSolo
+            disableClearable
             options={Object.values(articleIndex).map(article => article.title)}
             renderInput={params => {
                 return (
@@ -35,7 +36,7 @@ const SearchBar = () => {
                     variant="standard"
                     placeholder="Search..."
                     fullWidth
-                    color='primary'
+                    color='secondary'
                     onKeyDown={onKeyDown}
                     InputProps={{
                       ...params.InputProps,
@@ -52,7 +53,8 @@ const SearchBar = () => {
                           validity={minimumValidity} setValidity={setMinimumValidity}
                           dateRange={dateRange} setDateRange={setDateRange}
                         />
-                      )
+                      ),
+                      style: {color: 'white'}
                     }}
                   />
                 );
