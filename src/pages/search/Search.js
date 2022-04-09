@@ -8,12 +8,26 @@ import { findArticleByTitle } from '../../content/articles';
 const Search = () => {
     const [searchParams] = useSearchParams();
     const q = searchParams.get('q');
+    const minimumValidity = searchParams.get('v');
+    const startDate = searchParams.get('sd');
+    const endDate = searchParams.get('ed');
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         findArticleByTitle(q)
-            .then((res) => setArticles(res));
-    }, [q]);
+            .then((res) => {
+                if (minimumValidity) {
+                    res = res.filter(x => x.validityScore && x.validityScore >= minimumValidity);
+                }
+                if (startDate) {
+                    res = res.filter(x => x.date && new Date(x.date) >= new Date(startDate));
+                }
+                if (endDate) {
+                    res = res.filter(x => x.date && new Date(x.date) >= new Date(endDate));
+                }
+                setArticles(res);
+            });
+    }, [q, minimumValidity, startDate, endDate]);
 
     return (
         <div id='search-page'>
