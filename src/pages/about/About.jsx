@@ -1,14 +1,11 @@
 import './About.css';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Container } from '@mui/material';
 
 import constants from '../../constants'
 
 
 export default function About() {
-    const navigate = useNavigate();
-
     return (
         <Container className='about-page-container'>
             <Box className='section-heading'>
