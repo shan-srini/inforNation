@@ -9,10 +9,6 @@ import constants from '../../constants'
 export default function About() {
     const navigate = useNavigate();
 
-    const goToUri = (uri) => {
-        navigate(uri);
-    }
-
     return (
         <Container className='about-page-container'>
             <Box className='section-heading'>
