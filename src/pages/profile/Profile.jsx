@@ -1,9 +1,20 @@
 import './Profile.css';
 import React, { useEffect, useState } from 'react';
-import { Box, CircularProgress, Typography, Container } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 
 export default function Profile() {
     return (
-        <p>hehe</p>
+        <Container className='profile-page-container'>
+            <Box className='section-heading'>
+                <Typography variant='h3' textAlign='left'>
+                    {'Profile'}
+                </Typography>
+            </Box>
+            <Container className='section-body'>
+                <p>
+                    UI coming soon!
+                </p>
+            </Container>
+        </Container>
     )
 }

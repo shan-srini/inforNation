@@ -3,14 +3,15 @@ import './NavMenu.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Typography } from '@mui/material';
 
-import { NavMenuListing, SavedPosts, Profile, Settings } from '../'
+import { NavMenuListing, SavedPostsIcon, ProfileIcon, SettingsIcon } from '../'
+import constants from '../../constants'
 
 const NavMenu = ({ closeMenu }) => {
   const menuListings = [
-    <NavMenuListing label='About'/>,
-    <NavMenuListing label='Saved' href='google.com' Icon={SavedPosts} iconHeight='48' iconWidth='24' iconStroke='white' />,
-    <NavMenuListing label='Profile' Icon={Profile} iconHeight='24' iconWidth='24' iconStroke='white' />,
-    <NavMenuListing label='Settings' Icon={Settings} iconHeight='24' iconWidth='24' iconStroke='white' />,
+    <NavMenuListing label='About' route={constants.aboutRoute} />,
+    <NavMenuListing label='Saved' route={constants.savedPostsRoute} Icon={SavedPostsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
+    <NavMenuListing label='Profile' route={constants.profileRoute} Icon={ProfileIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
+    <NavMenuListing label='Settings' route={constants.settingsRoute} Icon={SettingsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
   ]
 
   return (
@@ -19,9 +20,11 @@ const NavMenu = ({ closeMenu }) => {
         <div className='menu-top-bar'>
           <MenuIcon onClick={closeMenu} className='inner-menu-icon-button' />
           <Typography variant='h3'>Menu</Typography>
-        </div>  
+        </div>
 
-        {menuListings.map((MenuListing) => MenuListing)}
+        <div style={{display: 'grid', gap: 10}}>
+          {menuListings.map((MenuListing) => MenuListing)}
+        </div>
 
       </div>
       <div onClick={closeMenu} className='menu-close-space' />

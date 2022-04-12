@@ -3,17 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
 
 // Icon is optional prop
-export default function NavMenuListing({ label, href, Icon, iconHeight, iconWidth, iconStroke }) {
-    const navigate = useNavigate()
+export default function NavMenuListing({ label, route, Icon, iconHeight, iconWidth, iconStroke }) {
+    const navigate = useNavigate();
 
-    const navToRoute = () => {
-        navigate('/')
+    const goToRoute = (route) => {
+        navigate(route)
     }
 
     return (
-        <div onClick={navToRoute} style={{display: 'flex', alignItems: 'center'}}>
-            <Typography variant='h5'>{label}</Typography>
-            {Icon && <Icon iconHeight={iconHeight} iconWidth={iconWidth} iconStroke={iconStroke}/>}
+        <div className='nav-menu-listing' onClick={() => { goToRoute(route) }}>
+            <Typography variant='h5' style={{ fontSize: 32, marginRight: 8 }}>{label}</Typography>
+            {Icon && <Icon iconHeight={iconHeight} iconWidth={iconWidth} iconStroke={iconStroke} />}
         </div>
     )
 }

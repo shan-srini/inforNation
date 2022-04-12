@@ -1,3 +1,7 @@
+button:hover {
+    cursor: pointer;
+}
+
 .divider {
     padding-top: 10px;
 }
