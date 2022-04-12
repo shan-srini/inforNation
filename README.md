@@ -1,6 +1,9 @@
 # inforNation
+
 [inforNation](https://infornation.netlify.app/) is a news article resource tool for finding factual and reputable information easily and efficiently. AI will be utilized to find and suggest recent/wide-reaching articles, and then display information to users showcasing the reasons for selection on our site in a transparent way. This will include graphs and charts that the user can interact with to verify the article’s credibility and leverage as groundwork to learn how to spot credibility or misinformation on their own.
+
 # Design goals
+
 - Exceptionally engage users.
   - Topics such as politics often serve as entertainment to people—while analyzing scientific papers, figures, and trends do not always do so.
   - Measure how often (baserates) & for how long they view or interact with certain components.
@@ -19,6 +22,7 @@
   - People with disabilities
 
 # Setup
+
 ```bash
 npm install
 ```
@@ -27,4 +31,10 @@ npm install
 
 ```bash
 npm run start
+```
+
+# lint
+
+```bash
+npm run lint
 ```

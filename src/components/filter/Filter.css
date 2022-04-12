@@ -13,6 +13,7 @@ button:hover {
 }
 
 .slider {
+    margin-top: 5px;
     margin-right: 25px;
     margin-left: 10px;
 }
@@ -20,4 +21,30 @@ button:hover {
 .slider-text-box {
     width: 27px;
     color: black !important;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: black !important;
+}
+
+.filter-popover {
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.date-title {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }

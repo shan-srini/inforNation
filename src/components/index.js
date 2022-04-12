@@ -6,4 +6,3 @@ export { default as NavMenuListing } from './navMenu/NavMenuListing.jsx'
 export { default as ProfileIcon } from './navMenu/ProfileIcon.jsx'
 export { default as SavedPostsIcon } from './navMenu/SavedPostsIcon.jsx'
 export { default as SettingsIcon } from './navMenu/SettingsIcon.jsx'
-
