@@ -1,0 +1,44 @@
+.about-page-container {
+  padding-top: 32px;
+  color: white;
+}
+
+.section-heading {
+  display: flex;
+  gap: 0.5%;
+  padding-bottom: 12px;
+
+  border-bottom: 0.5px solid var(--gray);
+}
+
+.section-body {
+  margin-bottom: 45px;
+  padding-left: 30%;
+  padding-right: 30%;
+  line-height: 180%;
+  font-size: large;
+}
+
+a:link {
+  color: var(--linkWhite);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--linkWhite);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--linkWhite);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--gray);
+  background-color: transparent;
+  text-decoration: underline;
+}
