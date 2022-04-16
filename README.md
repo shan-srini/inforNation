@@ -38,3 +38,9 @@ npm run start
 ```bash
 npm run lint
 ```
+
+# Troubleshooting
+
+- `npm ERR! ERESOLVE unable to resolve dependency tree ()`
+  - Ensure certain libraries that require the use of outdated dependencies are pleased using:
+    - `npm install --legacy-peer-deps @mui/x-date-pickers` 
