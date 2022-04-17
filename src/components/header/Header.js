@@ -50,7 +50,7 @@ export default function Header({ hasCentralHomeSearchBar}) {
 								inforNation
 							</Typography>
 						</div>
-						{(!hasCentralHomeSearchBar || currentPath != constants.homeRoute) &&
+						{(!hasCentralHomeSearchBar || currentPath !== constants.homeRoute) &&
 						<Container>
 							<SearchBar placeholder='Search...' textFieldVariant='standard'/>
 						</Container>}
