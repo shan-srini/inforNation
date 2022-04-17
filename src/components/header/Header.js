@@ -8,14 +8,17 @@ import {
 	AppBar,
 	Typography,
 } from '@mui/material';
+
+import constants from '../../constants'
 import SearchBar from '../searchBar/SearchBar';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import NavMenu from '../navMenu/NavMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const Header = () => {
+export default function Header({ hasCentralHomeSearchBar}) {
 	const navigate = useNavigate();
+	const currentPath = useLocation().pathname;
 	const [menuVisible, setMenuVisible] = useState(false);
 
 	const goHome = () => {
@@ -47,14 +50,13 @@ const Header = () => {
 								inforNation
 							</Typography>
 						</div>
+						{(!hasCentralHomeSearchBar || currentPath != constants.homeRoute) &&
 						<Container>
-							<SearchBar />
-						</Container>
+							<SearchBar placeholder='Search...' textFieldVariant='standard'/>
+						</Container>}
 					</Toolbar>
 				</AppBar>
 			</Box>
 		</>
 	);
 };
-
-export default Header;

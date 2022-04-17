@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './SearchBar.css';
 import { articleIndex } from '../../content/articles/index';
 import { Autocomplete, InputAdornment, TextField } from '@mui/material';
@@ -6,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import Filter from '../filter/Filter';
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder, textFieldVariant }) => {
 	const navigate = useNavigate();
 	const [minimumValidity, setMinimumValidity] = useState(0);
 	const [dateRange, setDateRange] = useState(null);
@@ -37,8 +38,8 @@ const SearchBar = () => {
 				return (
 					<TextField
 						{...params}
-						variant='standard'
-						placeholder='Search...'
+						variant={textFieldVariant}
+						placeholder={placeholder}
 						fullWidth
 						color='secondary'
 						onKeyDown={onKeyDown}
@@ -60,7 +61,7 @@ const SearchBar = () => {
 									setDateRange={setDateRange}
 								/>
 							),
-							style: { color: 'white' },
+							style: { borderRadius: '0.625rem', color: 'white', fontSize: 20 },
 						}}
 					/>
 				);

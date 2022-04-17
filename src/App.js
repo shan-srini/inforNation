@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 
@@ -15,21 +15,26 @@ import Search from './pages/search/Search';
 import Settings from './pages/settings/Settings';
 
 const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path={constants.aboutRoute} element={<About />} />
-          <Route path={constants.articlesRoute} element={<Article />} />
-          <Route path={constants.homeRoute} element={<Home />} />
-          <Route path={constants.profileRoute} element={<Profile />} />
-          <Route path={constants.savedPostsRoute} element={<SavedPosts />} />
-          <Route path={constants.searchRoute} element={<Search />} />
-          <Route path={constants.settingsRoute} element={<Settings />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+  const [hasCentralHomeSearchBar, setHasCentralHomeSearchBar] = useState(true)
+  const hasCentralHomeSearchBar_state = {
+    value: hasCentralHomeSearchBar,
+    setter: setHasCentralHomeSearchBar
+  }
+  return(
+    <ThemeProvider theme = { theme } >
+        <BrowserRouter>
+          <Header hasCentralHomeSearchBar={hasCentralHomeSearchBar} />
+          <Routes>
+            <Route path={constants.aboutRoute} element={<About />} />
+            <Route path={constants.articlesRoute} element={<Article />} />
+            <Route path={constants.homeRoute} element={<Home hasCentralHomeSearchBar={hasCentralHomeSearchBar} />} />
+            <Route path={constants.profileRoute} element={<Profile />} />
+            <Route path={constants.savedPostsRoute} element={<SavedPosts />} />
+            <Route path={constants.searchRoute} element={<Search />} />
+            <Route path={constants.settingsRoute} element={<Settings hasCentralHomeSearchBar_state={hasCentralHomeSearchBar_state} />} />
+          </Routes>
+        </BrowserRouter>
+    </ThemeProvider >
   )
 }
 
