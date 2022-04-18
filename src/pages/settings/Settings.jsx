@@ -2,7 +2,12 @@ import './Settings.css';
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 
-export default function Settings() {
+import SettingSwitch from '../../components/settings/SettingSwitch'
+
+export default function Settings({ hasCentralHomeSearchBar_state }) {
+    const toggleCentralHomeSearchBar = () => {
+        hasCentralHomeSearchBar_state.setter(!hasCentralHomeSearchBar_state.value)
+    }
     return (
         <Container className='settings-page-container'>
             <Box className='section-heading'>
@@ -11,9 +16,7 @@ export default function Settings() {
                 </Typography>
             </Box>
             <Container className='section-body'>
-                <p>
-                    UI coming soon!
-                </p>
+                <SettingSwitch onClick={toggleCentralHomeSearchBar} labelTxt={'Enable theme: central homepage search bar'} isChecked={hasCentralHomeSearchBar_state.value}/>
             </Container>
         </Container>
     )

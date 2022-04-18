@@ -13,8 +13,12 @@
 
 .section-body {
   margin-bottom: 45px;
+
   padding-left: 30%;
   padding-right: 30%;
+  padding-top: 20px;
   line-height: 180%;
+  gap: 0.5%;
   font-size: large;
+  text-align: left;
 }
