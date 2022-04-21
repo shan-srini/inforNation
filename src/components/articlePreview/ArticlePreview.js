@@ -39,7 +39,7 @@ const ArticlePreview = ({ articleId }) => {
 					<div className='article-preview-bottom'>
 						<span style={{ fontSize: '12px', color: 'white' }}>
 							<CircularProgressWithLabel value={article.validityScore} />
-							<div>Articile Validity</div>
+							<div>Article Validity</div>
 						</span>
 						<span className='article-preview-date'>{article.date}</span>
 					</div>
