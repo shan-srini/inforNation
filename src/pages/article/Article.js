@@ -2,11 +2,12 @@ import './Article.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, CircularProgress, Typography, Container } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import ReactFlow from 'react-flow-renderer';
 import 'react-flow-renderer/dist/style.css';
+
 import { getArticleById } from '../../content/articles';
-import { SavePost, SharePost, VizToggle } from '../../components';
-import CloseIcon from '@mui/icons-material/Close';
+import { CommentsForm, SavePost, SharePost, VizToggle } from '../../components';
 
 const Article = (props) => {
 	const { id: articleId } = useParams();
@@ -109,6 +110,7 @@ const Article = (props) => {
 				))}
 
 			<Container className='article-content'>{article.content}</Container>
+			<CommentsForm/>
 		</Container>
 	) : (
 		<CircularProgress />

@@ -15,7 +15,7 @@ import Search from './pages/search/Search';
 import Settings from './pages/settings/Settings';
 
 const App = () => {
-  const [hasCentralHomeSearchBar, setHasCentralHomeSearchBar] = useState(true)
+  const [hasCentralHomeSearchBar, setHasCentralHomeSearchBar] = useState(false)
   const hasCentralHomeSearchBar_state = {
     value: hasCentralHomeSearchBar,
     setter: setHasCentralHomeSearchBar
