@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { Box, Container } from '@mui/material';
+import React, { useRef } from 'react'
+import { Box } from '@mui/material';
 
 import './CommentsForm.css'
 
@@ -7,7 +7,6 @@ export default function CommentsForm({ slug }) {
     const commentEl = useRef()
     const nameEl = useRef()
     const emailEl = useRef()
-    const storeDataEl = useRef()
 
     return (
         <Box className='comments-form-content'>
