@@ -22,7 +22,7 @@ const CategoryCarousel = ({ category }) => {
 							textTransform: 'none',
 						}}
 						key={`${category}-${articleId}-${ii}-preview`}
-						icon={<ArticlePreview articleId={articleId} />}
+						icon={<ArticlePreview articleId={articleId} style={{marginLeft: 0}}/>}
 					/>
 				))}
 			</Tabs>

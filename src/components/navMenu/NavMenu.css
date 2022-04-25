@@ -1,4 +1,4 @@
-@mui/x-date-pickers/LocalizationProvider.menu-inner-container {
+.menu-inner-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
