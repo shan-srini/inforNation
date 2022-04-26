@@ -13,8 +13,10 @@
 .article-heading {
     display: flex;
     gap: 0.5%;
+    width: 100%;
     padding-bottom: 12px;
-
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 0.5px solid var(--gray);
 }
 
@@ -29,4 +31,24 @@
 .react-flow {
     background: #212121;
     margin-top: 8px;
+}
+
+.article-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.article-img {
+    border-radius: 50px;
+}
+
+.article-validity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
 }

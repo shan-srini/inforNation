@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './ArticlePreview.css';
-import { Typography, Box, CircularProgress } from '@mui/material';
+import { Typography, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { getArticleById } from '../../content/articles';
+import ValidityIndicator from '../validityIndicator/ValidityIndicator';
 
 const ArticlePreview = ({ articleId }) => {
 	const navigate = useNavigate();
@@ -38,7 +39,7 @@ const ArticlePreview = ({ articleId }) => {
 					</Typography>
 					<div className='article-preview-bottom'>
 						<span style={{ fontSize: '12px', color: 'white' }}>
-							<CircularProgressWithLabel value={article.validityScore} />
+							<ValidityIndicator value={article.validityScore} />
 							<div>Article Validity</div>
 						</span>
 						<span className='article-preview-date'>{article.date}</span>
@@ -50,45 +51,5 @@ const ArticlePreview = ({ articleId }) => {
 		</div>
 	);
 };
-
-function CircularProgressWithLabel(props) {
-	const calculateColor = () => {
-		if (props.value < 30) {
-			return 'error';
-		} else if (props.value < 50) {
-			return 'warning';
-		} else {
-			return 'success';
-		}
-	};
-	return (
-		<Box
-			sx={{ position: 'relative', display: 'inline-flex' }}
-			aria-label='validity'
-		>
-			<CircularProgress
-				variant='determinate'
-				{...props}
-				color={calculateColor()}
-			/>
-			<Box
-				sx={{
-					top: 0,
-					left: 0,
-					bottom: 0,
-					right: 0,
-					position: 'absolute',
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				<Typography variant='caption' component='div' color={'white'}>
-					{props.value}
-				</Typography>
-			</Box>
-		</Box>
-	);
-}
 
 export default ArticlePreview;
