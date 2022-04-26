@@ -11,6 +11,16 @@ export const calculateErrorColor = (value) => {
     }
 };
 
+export const calculateErrorColorText = (value) => {
+    if (value < 30) {
+        return '#f44336';
+    } else if (value < 50) {
+        return '#ffeb3b';
+    } else {
+        return '#43a047';
+    }
+};
+
 export default function ValidityIndicator(props) {
 	return (
 		<Box
@@ -34,7 +44,7 @@ export default function ValidityIndicator(props) {
 					justifyContent: 'center',
 				}}
 			>
-				<Typography variant='caption' component='div' color={'white'}>
+				<Typography variant='caption' component='div' color={calculateErrorColorText(props.value)}>
 					{props.value}
 				</Typography>
 			</Box>
