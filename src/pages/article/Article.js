@@ -7,7 +7,7 @@ import ReactFlow from 'react-flow-renderer';
 import 'react-flow-renderer/dist/style.css';
 import { getArticleById } from '../../content/articles';
 import { CommentsForm, SavePost, SharePost, VizToggle } from '../../components';
-import ValidityIndicator, { calculateErrorColor } from '../../components/validityIndicator/ValidityIndicator';
+import ValidityIndicator, { calculateErrorColorText } from '../../components/validityIndicator/ValidityIndicator';
 
 const Article = (props) => {
 	const { id: articleId } = useParams();
@@ -87,8 +87,8 @@ const Article = (props) => {
 				(article.vizData ? (
 					<div>
 						<span className='article-validity'>
-						<Typography color={calculateErrorColor(article.validityScore)} variant='h4'>
-							Article Validity:
+						<Typography color={calculateErrorColorText(article.validityScore)} variant='h4'>
+							Article Validity:&nbsp;
 						</Typography>
 						<ValidityIndicator value={article.validityScore} />
 						</span>
