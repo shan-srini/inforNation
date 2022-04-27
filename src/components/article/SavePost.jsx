@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { isPostLiked, savePost } from '../../utils/savePosts';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
