@@ -14,7 +14,7 @@ export default function Landing({ hasCentralHomeSearchBar }) {
 			</div>}
 
 			{content.map((category) => (
-				<CategoryCarousel category={category} />
+				<CategoryCarousel category={category} style={{marginLeft: 0}} />
 			))}
 		</Container>
 	);

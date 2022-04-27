@@ -40,7 +40,7 @@ const Article = (props) => {
 				>
 					{article.title}
 				</Typography>
-				<div>
+				<div className='article-buttons'>
 					<button
 						onClick={toggleViz}
 						title='Expand datasource viz'
@@ -63,7 +63,7 @@ const Article = (props) => {
 						title='Save post'
 						style={{ borderRadius: '0.5rem' }}
 					>
-						<SavePost height='32' width='32' stroke='white' />
+						<SavePost height='32' width='32' stroke='white' articleID={article.id} />
 					</button>
 					<button
 						className='button'
@@ -121,7 +121,6 @@ const Article = (props) => {
 			<div className='article-img-container'>
 				<img
 					src={article.image}
-					width={500}
 					className='article-img'
 					alt='inforNation article preview'
 				/>
