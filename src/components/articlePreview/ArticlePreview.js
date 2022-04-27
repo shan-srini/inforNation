@@ -23,6 +23,7 @@ const ArticlePreview = ({ articleId }) => {
 	return (
 		<div className='article-preview-container'>
 			{article ? (
+				<> 
 				<div onClick={openArticle}>
 					<img
 						src={article.image}
@@ -45,10 +46,11 @@ const ArticlePreview = ({ articleId }) => {
 						</span>
 						<span className='article-preview-date'>{article.date}</span>
 					</div>
+					</div>
 					<div className='save-post-article-preview'>
 						<SavePost articleID={article.id} />
 					</div>
-				</div>
+				</>
 			) : (
 				<CircularProgress />
 			)}
