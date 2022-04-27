@@ -8,10 +8,10 @@ import constants from '../../constants'
 
 const NavMenu = ({ closeMenu }) => {
   const menuListings = [
-    <NavMenuListing label='About' route={constants.aboutRoute} />,
-    <NavMenuListing label='Saved' route={constants.savedPostsRoute} Icon={SavedPostsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
-    <NavMenuListing label='Profile' route={constants.profileRoute} Icon={ProfileIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
-    <NavMenuListing label='Settings' route={constants.settingsRoute} Icon={SettingsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
+    <NavMenuListing closeMenu={closeMenu} label='About' route={constants.aboutRoute} />,
+    <NavMenuListing closeMenu={closeMenu} label='Saved' route={constants.savedPostsRoute} Icon={SavedPostsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
+    <NavMenuListing closeMenu={closeMenu} label='Profile' route={constants.profileRoute} Icon={ProfileIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
+    <NavMenuListing closeMenu={closeMenu} label='Settings' route={constants.settingsRoute} Icon={SettingsIcon} iconHeight='32' iconWidth='32' iconStroke='white' />,
   ]
 
   return (

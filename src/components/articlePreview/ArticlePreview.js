@@ -4,6 +4,7 @@ import { Typography, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { getArticleById } from '../../content/articles';
 import ValidityIndicator from '../validityIndicator/ValidityIndicator';
+import SavePost from '../article/SavePost'
 
 const ArticlePreview = ({ articleId }) => {
 	const navigate = useNavigate();
@@ -20,9 +21,9 @@ const ArticlePreview = ({ articleId }) => {
 	};
 
 	return (
-		<div onClick={openArticle} className='article-preview-container'>
+		<div className='article-preview-container'>
 			{article ? (
-				<>
+				<div onClick={openArticle}>
 					<img
 						src={article.image}
 						width={200}
@@ -44,7 +45,10 @@ const ArticlePreview = ({ articleId }) => {
 						</span>
 						<span className='article-preview-date'>{article.date}</span>
 					</div>
-				</>
+					<div className='save-post-article-preview'>
+						<SavePost articleID={article.id} />
+					</div>
+				</div>
 			) : (
 				<CircularProgress />
 			)}
